@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+@model UserInfoViewModel
+
+@if (Model != null)
+{
+    <div>
+    <partial name="_UserInfo" />
+</div>
+}
+else
+{
+    <div>
+    <p>No hay datos disponibles.</p>
+</div>
+}
+
+<form method="post">
+    @* formulario para llenar de datos en la bd *@
+    <button type="submit" class="btn btn-primary">Cargar Datos con POST</button>
+</form>
